@@ -3,19 +3,10 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE CovidDeaths set continent = NULL where continent = ''
 SET SQL_SAFE_UPDATES = 1;
 
--- Change date format
--- UPDATE CovidDeaths set date = DATE_FORMAT(STR_TO_DATE(date,'%m/%d/%Y'), '%Y-%m-%d') WHERE date = '%m/%d/%Y'
--- CovidDeaths SET date = DATE_FORMAT(STR_TO_DATE(date, '%Y/%m/%d')) WHERE DATE_FORMAT(STR_TO_DATE(date, '%m/%d/%Y')) <> '0000-00-00';
--- set date = DATE_FORMAT(STR_TO_DATE(date,'%m/%d/%Y'), '%Y-%m-%d') WHERE date like '__/__/____'
-
 SELECT *
 FROM CovidDeaths
 -- WHERE continent is not NULL
 ORDER BY 3,4
-
--- SELECT
--- 	COUNT(*)
--- FROM CovidDeaths
 
 -- SELECT *
 -- FROM CovidVaccinations
